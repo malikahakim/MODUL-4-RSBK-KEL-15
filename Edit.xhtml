@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>JSF RSBK</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+                <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <style>
+    body, html {
+        background-color:white;
+        color:grey;        
+    }
+    th {
+        background-color: #f8f8f8;
+        text-align: center;
+    }
+    td {
+        background-color: white;
+        text-align: center;
+    }
+    td:nth-child(1) {
+        text-align: center;
+    }
+    .daftar{
+        border: 2px solid #e5e5e5; 
+        border-radius: 10px; 
+        padding: 20px;
+        background: white;
+        box-shadow:0 0 6px 0 rgba(0,0,0,.12)!important;
+    }
+</style>
+</h:head>
+    <img src="https://upload.wikimedia.org/wikipedia/id/8/88/Logo_UNDIP.jpg" style="position:absolute;margin-left: 700px; margin-top:200px;" width="40%"/>
+  <h:body>
+      <nav class="navbar navbar-default" >
+            <div class="container-fluid" style="background-color:#fff;box-shadow: 0 2px 6px 0 rgba(49,53,59,.12)">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <a style="font-family: Google Sans; color: #000; margin-top: 8px;" class="navbar-brand" href="#"><b>Universitas Diponegoro</b></a>
+                    
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+      
+<center>
+            <h:form>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div class="panel panel-primary daftar" >
+                        <div class="panel-heading" style="font-family: Google Sans; background-color:#5cb85c; border-color: #5cb85c;">Form Edit Mahasiswa</div>
+                        <div class="panel-body">
+                            <table>
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4" style="text-align:left; color:#000;  font-size: 14px; font-family: Google Sans;">NIM :</label>
+                                        <div class="col-sm-8">
+                                            <h:inputText style="font-family: Google Sans;font-size: 12px;" class="form-control"  value="#{EditMahasiswa.NIM}" ></h:inputText>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4" style="text-align:left; color:#000;  font-size: 14px; font-family: Google Sans;">Nama Mahasiswa :</label>
+                                        <div class="col-sm-8">
+                                            <h:inputText style="font-family: Google Sans;font-size: 12px;" class="form-control"  value="#{EditMahasiswa.NAMA}" ></h:inputText>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4" style="text-align:left; color:#000;  font-size: 14px; font-family: Google Sans;">Penjurusan :</label>
+                                        <div class="col-sm-8">
+                                            <h:inputText style="font-family: Google Sans;font-size: 12px;" class="form-control"  value="#{EditMahasiswa.PENJURUSAN}" ></h:inputText>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2" style="margin-right:120px;">
+                                            <tr style="font-family: Google Sans; color: #000; font-size: 12px;">
+                                                <td>1 - Security and Network &nbsp;&nbsp;</td>
+                                                <td>2 - Software Engineering &nbsp;&nbsp;</td>
+                                                <td>3 - Embedded System &nbsp;&nbsp;</td>
+                                                <td>4 - Multimedia &nbsp;&nbsp;</td>
+                                            </tr>
+                                </div>
+                            </table>
+                        </div>
+                        <br></br>
+                        <h:commandButton style="font-size:10px;margin-left: 280px; font-family: Google Sans" styleClass="btn btn-info" value="Update" action="#{EditMahasiswa.Update_Mahasiswa}">
+                            <f:param name="Update_NIM" value="#{EditMahasiswa.NIM}" /></h:commandButton>
+                        <h:commandButton style="font-size:10px;margin-left: 400px;" styleClass="btn btn-danger" value="Kembali" action="index.xhtml"></h:commandButton>
+                        <br></br>
+                        <br></br>
+                    </div>
+                </div>
+            </h:form>
+        </center>
+</h:body>
+</html>
